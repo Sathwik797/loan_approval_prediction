@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+            text-align: center;
+        }
+        .result-container {
+            display: inline-block;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background: #f9f9f9;
+        }
+        h2 {
+            color: #333;
+        }
+        .approved {
+            color: green;
+            font-weight: bold;
+        }
+        .rejected {
+            color: red;
+            font-weight: bold;
+        }
+        a {
+            display: block;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="result-container">
+        <h2>Loan Prediction Result</h2>
+        <p class="{% if result == 'Loan Approved' %}approved{% else %}rejected{% endif %}">
+            {{ result }}
+        </p>
+        <a href="/">Try Again</a>
+    </div>
+
+</body>
+</html>
